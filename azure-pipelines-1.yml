@@ -27,5 +27,5 @@ steps:
   inputs:
     azureSubscription: 'MyServiceConnection'
     appType: 'webApp'
-    appName: 'MyWebApiApp'
+    appName: 'DevopsAPIServiceCICD001'
     package: '$(Build.ArtifactStagingDirectory)'
