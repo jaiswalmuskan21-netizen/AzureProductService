@@ -1,0 +1,31 @@
+trigger:
+- main
+
+pool:
+  name: MuskanAgent
+
+steps:
+
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
+
+- script: dotnet restore src/productservice/productservice.csproj
+  displayName: 'Restore'
+
+- script: dotnet build src/productservice/productservice.csproj --no-restore
+  displayName: 'Build'
+
+- script: dotnet test test/MyTests/MyTests.csproj
+  displayName: 'Test'
+
+- script: dotnet publish src/productservice/productservice.csproj -c Release -o $(Build.ArtifactStagingDirectory)
+  displayName: 'Publish'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'MyServiceConnection'
+    appType: 'webApp'
+    appName: 'MyWebApiApp'
+    package: '$(Build.ArtifactStagingDirectory)'
