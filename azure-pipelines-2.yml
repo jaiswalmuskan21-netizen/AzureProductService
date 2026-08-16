@@ -20,7 +20,7 @@ steps:
 - script: dotnet build src/productservice/productservice.csproj --configuration Release --no-restore
   displayName: 'Build API'
 
-- script: dotnet test test/Mytests/Mytests.csproj --configuration Release
+- script: dotnet test test/MyTests/MyTests.csproj --configuration Release
   displayName: 'Run Tests'
 
 - script: dotnet publish src/productservice/productservice.csproj --configuration Release --output $(Build.ArtifactStagingDirectory)/publish
@@ -40,7 +40,7 @@ steps:
   inputs:
     azureSubscription: 'MyServiceConnection'
     appType: 'webApp'
-    appName: 'AzureDeveopsAPIServiceCICD'
+    appName: 'DevopsAPIServiceCICD001'
     package: '$(Build.ArtifactStagingDirectory)/productservice.zip'
     deploymentMethod: 'zipDeploy'
 
