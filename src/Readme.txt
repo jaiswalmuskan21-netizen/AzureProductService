@@ -68,3 +68,36 @@ git push -u origin main
 git remote add origin https://github.com/jaiswalmuskan21-netizen/AzureProductService.git
 git branch -M main
 git push -u origin main
+
+
+7 aug:
+
+Now we have two application for CICD:
+1.src/productservice
+2.test/MyTest
+add reference of productservice in mytest->csproj
+Note:Adapter is a runner of testcase
+
+=>1.Now we have created the pipeline and to run the pipline we have the agent which running
+locally as a window services
+
+2. dotnetcore..github....devops....
+
+11aug: 
+
+Multistaging yml file:(one series everything)
+
+steps for pipeline to create continous Integration(Trigger) , continous Deployment
+1.Trigger:
+2: Agent:
+3: dotnet sdk Version
+4: dotnet restore(csproj)
+5:csproj with build
+6: publish(csproj location)
+7,8,9,10 steps(additonal task)
+11. deployment
+  a. Service Connection name of azure
+  b.Azure app service name
+
+
+Note: csproj is more imp for pipline
