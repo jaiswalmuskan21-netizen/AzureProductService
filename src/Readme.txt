@@ -101,3 +101,31 @@ steps for pipeline to create continous Integration(Trigger) , continous Deployme
 
 
 Note: csproj is more imp for pipline
+
+-----------------------------------------------------------------------------------
+22 aug:
+
+Architecture of Azure APIM:
+
+https://devopsapiservicecicd001-hyf3cqd2cpajfrfe.centralindia-01.azurewebsites.net/swagger/v1/swagger.json
+
+Actual session of Microservices
+
+1.productservice
+2.discountservice
+
+About APIM:
+
+1.APIM provides a feature known as  API'.
+ 2. Within Apis we have multiple templates like OpenAPI(Rest api's), WSDL etc.
+ 3. APIM(Gateway)[UppStream] and Api's[Downstraem](service like product service,orderservice...).
+
+ 4. Open API Specification:
+
+    Display name:productservice
+    
+    Name : productservice ---->Downstream
+    
+    API URL suffix :  muskanproductservice ---> UppStream
+   
+    Base URL : https://muskan-apim.azure-api.net/muskanproductservice
