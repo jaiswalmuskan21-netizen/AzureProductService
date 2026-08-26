@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\discountservice\\DiscountService.csproj": {}
+    "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\DiscountService\\DiscountService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\discountservice\\DiscountService.csproj": {
+    "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\DiscountService\\DiscountService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\discountservice\\DiscountService.csproj",
+        "projectUniqueName": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\DiscountService\\DiscountService.csproj",
         "projectName": "DiscountService",
-        "projectPath": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\discountservice\\DiscountService.csproj",
+        "projectPath": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\DiscountService\\DiscountService.csproj",
         "packagesPath": "C:\\Users\\ACER PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\discountservice\\obj\\",
+        "outputPath": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\DiscountService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

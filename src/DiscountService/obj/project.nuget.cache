@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m5e0gn/Xw9Q=",
+  "dgSpecHash": "GzwEkXcYiSs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\discountservice\\DiscountService.csproj",
+  "projectFilePath": "C:\\Users\\ACER PC\\OneDrive\\Documents\\MyWebApiApp\\src\\DiscountService\\DiscountService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER PC\\.nuget\\packages\\azure.core\\1.54.0\\azure.core.1.54.0.nupkg.sha512",
     "C:\\Users\\ACER PC\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.5.1\\azure.extensions.aspnetcore.configuration.secrets.1.5.1.nupkg.sha512",
