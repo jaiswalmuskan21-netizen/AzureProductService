@@ -1,0 +1,45 @@
+trigger:
+- main
+
+pool:
+  name: MuskanAgent
+  demands:
+  - Agent.Name -equals DESKTOP-961FTSG
+
+steps:
+
+- task: UseDotNet@2
+  displayName: 'Install .NET 10 SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
+
+- script: dotnet restore src/DiscountService/DiscountService.csproj
+  displayName: 'Restore API'
+
+- script: dotnet build src/DiscountService/DiscountService.csproj --configuration Release --no-restore
+  displayName: 'Build API'
+
+- script: dotnet test test/MyTests/MyTests.csproj --configuration Release
+  displayName: 'Run Tests'
+
+- script: dotnet publish src/DiscountService/DiscountService.csproj --configuration Release --output $(Build.ArtifactStagingDirectory)/publish
+  displayName: 'Publish API'
+
+- task: ArchiveFiles@2
+  displayName: 'Create Deployment Package'
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/publish'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/DiscountService.zip'
+    replaceExistingArchive: true
+
+- task: AzureWebApp@1
+  displayName: 'Deploy to Azure Web App'
+  inputs:
+    azureSubscription: 'MyServiceConnection'
+    appType: 'webApp'
+    appName: 'discountservice-muskan'
+    package: '$(Build.ArtifactStagingDirectory)/DiscountService.zip'
+    deploymentMethod: 'zipDeploy'
