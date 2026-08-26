@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net10.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/127ef9fb-c12d-47eb-9294-dd37a7c8d9fc/resourceGroups/YamanResourceGroup/providers/Microsoft.Web/sites/DiscountService-AIAgent"
+}

@@ -129,3 +129,16 @@ About APIM:
     API URL suffix :  muskanproductservice ---> UppStream
    
     Base URL : https://muskan-apim.azure-api.net/muskanproductservice
+
+
+    ->Go to subscription:
+ 
+   show key:
+    primarykey: 417170a205214dfcb92ab86221dd754e
+
+    gateway url : https://muskan-apim.azure-api.net/muskanproductservice/api/product/GetProducts?subscription-key=417170a205214dfcb92ab86221dd754e
+
+
+    ?subscription-key=417170a205214dfcb92ab86221dd754e
+
+    Query string is not secure while we are calling from browser
